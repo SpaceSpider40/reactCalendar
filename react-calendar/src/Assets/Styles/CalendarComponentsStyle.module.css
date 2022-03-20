@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+* {
+  font-family: 'League Spartan', sans-serif;
+}
+
+body {
+  background-color: #72726e;
+}
+
+.month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #7e837e;
+}
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: safe;
+      -ms-flex-pack: safe;
+          justify-content: safe;
+  height: 4em;
+  text-align: end;
+  background-color: #F5CB5C;
+  border-bottom: #ad810b solid 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.yearLabel {
+  font-weight: 600;
+  font-size: 3.2rem;
+  margin-right: 2px;
+  margin-left: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.monthLabel {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 2rem;
+  margin-bottom: 3px;
+}
+
+.buttonHolder {
+  margin-left: 10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.buttonHolder button {
+  margin-right: 3px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 80%;
+  width: 2em;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 2rem;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  font-weight: 900;
+  border-radius: 20px;
+}
+
+.buttonHolder button:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  background-color: #fbeabc;
+}
+
+.day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #E8EDDF;
+  border: solid 5px #F5CB5C;
+  margin: 10px;
+  width: 23%;
+  height: 300px;
+}
+
+.day:hover {
+  background-color: #fbeabc;
+  cursor: pointer;
+}
+
+.dayLabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  font-size: 3rem;
+  font-weight: 600;
+  background-color: #F5CB5C;
+}
+
+.dayLabel span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.dayEventHolder {
+  margin-top: 10px;
+}
+
+.dayEvent {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 1px #F5CB5C solid;
+}
+
+.dayEvent:last-of-type {
+  border: none;
+}
+
+.eventIcon {
+  color: Yellow;
+}
+
+.yearView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.yearViewItem {
+  text-align: center;
+  height: 5em;
+  width: 20%;
+  margin: 10px;
+  font-size: 3rem;
+  background-color: #E8EDDF;
+  padding: 5px;
+  border: 5px solid #F5CB5C;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.yearViewItem:hover {
+  cursor: pointer;
+  background-color: #fbeabc;
+}
+
+.yearsViewContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+}
+
+.yearsViewContent span {
+  margin: 1px;
+  border: 2px solid #F5CB5C;
+  padding: 10px;
+  width: 20%;
+}
+
+.monthsView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.monthsViewItem {
+  text-align: center;
+  height: 5em;
+  width: 20%;
+  margin: 10px;
+  font-size: 3rem;
+  background-color: #E8EDDF;
+  padding: 5px;
+  border: 5px solid #F5CB5C;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.monthsViewItem:hover {
+  cursor: pointer;
+  background-color: #fbeabc;
+}
+
+.monthsViewContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+}
+
+.monthsViewContent span {
+  margin: 1px;
+  border: 2px solid #F5CB5C;
+  padding: 5px;
+  width: 10%;
+}
+/*# sourceMappingURL=CalendarComponentsStyle.module.css.map */

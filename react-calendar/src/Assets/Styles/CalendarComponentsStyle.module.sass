@@ -1,0 +1,165 @@
+$bg: #242423;
+$color1: #333533;
+$color2: #E8EDDF;
+$color3: #F5CB5C;
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap')
+
+*
+    font-family: 'League Spartan', sans-serif
+
+body
+    background-color: lighten($bg, 30)
+    
+.month
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    height: 100%
+    justify-content: center
+    background-color: lighten($color1, 30)
+
+.label
+    display: flex
+    justify-content: safe
+    height: 4em
+    text-align: end
+    background-color: $color3
+    border-bottom: darken($color3, 30) solid 5px
+    position: sticky
+    top: 0
+
+.yearLabel
+    font-weight: 600
+    font-size: 3.2rem
+    margin-right: 2px
+    margin-left: 10px
+    align-self: flex-end
+
+.monthLabel
+    align-self: flex-end
+    font-size: 2rem
+    margin-bottom: 3px
+
+.buttonHolder
+    margin-left: 10px
+    justify-content: flex-end
+    display: flex
+    flex-direction: row
+    width: 100%
+    margin-right: 10px
+    button
+        margin-right: 3px
+        align-self: center
+        height: 80%
+        width: 2em
+        border: none
+        cursor: pointer
+        background-color: transparent
+        font-size: 2rem
+        transition-duration: 0.2s
+        font-weight: 900
+        border-radius: 20px
+        &:hover
+            transform: scale(1.08)
+            background-color: lighten($color3, 20)
+.day
+    display: flex
+    flex-direction: column
+    background-color: $color2
+    border: solid 5px $color3
+    margin: 10px
+    width: 23%
+    height: 300px
+    &:hover
+        background-color: lighten($color3, 20)
+        cursor: pointer
+
+.dayLabel
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 10px
+    font-size: 3rem
+    font-weight: 600
+    background-color: $color3
+    span
+        align-self: center
+
+.dayEventHolder
+    margin-top: 10px
+
+.dayEvent
+    width: 100%
+    text-align: center
+    font-size: 1.5rem
+    border-bottom: 1px $color3 solid
+    &:last-of-type
+        border: none;
+
+.eventIcon
+    color: Yellow
+
+.yearView
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    
+
+.yearViewItem
+    text-align: center
+    height: 5em
+    width: 20%
+    margin: 10px
+    font-size: 3rem
+    background-color: $color2
+    padding: 5px
+    border: 5px solid $color3
+    transition-duration: 0.2s
+    &:hover
+        cursor: pointer
+        background-color: lighten($color3, 20)
+
+.yearsViewContent
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    font-size: 1rem
+    span
+        margin: 1px
+        border: 2px solid $color3
+        padding: 10px
+        width: 20%
+
+
+.monthsView
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+
+.monthsViewItem
+    text-align: center
+    height: 5em
+    width: 20%
+    margin: 10px
+    font-size: 3rem
+    background-color: $color2
+    padding: 5px
+    border: 5px solid $color3
+    transition-duration: 0.2s
+    &:hover
+        cursor: pointer
+        background-color: lighten($color3, 20)
+
+.monthsViewContent
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    font-size: 1rem
+    span
+        margin: 1px
+        border: 2px solid $color3
+        padding: 5px
+        width: 10%
