@@ -35,11 +35,27 @@ body
     margin-right: 2px
     margin-left: 10px
     align-self: flex-end
+    border: none
+    background: transparent
+    padding: 2px
+    transition-duration: 0.2s
+    border-radius: 20px
+    &:hover
+        cursor: pointer
+        background-color: lighten($color3, 20)
 
 .monthLabel
     align-self: flex-end
     font-size: 2rem
     margin-bottom: 3px
+    border: none
+    background: transparent
+    padding: 2px
+    transition-duration: 0.2s
+    border-radius: 20px
+    &:hover
+        cursor: pointer
+        background-color: lighten($color3, 20)
 
 .buttonHolder
     margin-left: 10px
@@ -163,3 +179,52 @@ body
         border: 2px solid $color3
         padding: 5px
         width: 10%
+
+.holder
+    display: flex
+    flex-direction: row
+
+.sideBar
+    width: 40%
+    display: flex
+    flex-direction: column
+.sideBarHidden
+    display: none
+
+.sideBarViewLabel
+    background-color: $color3
+    border-bottom: 5px solid darken($color3, 30)
+    padding: 20px
+    font-size: 2rem
+    font-weight: 600
+    text-align: center
+    width: 80%
+
+.sideBarViewContent
+
+.extendedEvent
+    background-color: $color3
+    padding: 5px    
+    border-bottom: 5px solid lighten($color3, 10)
+
+.extendedEventTitle
+    text-align: center
+    font-size: 2rem
+
+.extendedEventContents
+
+.labelholder
+    display: flex
+    flex-direction: row
+    width: 100%
+    button
+        width: 20%
+        border: none
+        background-color: $color3
+        padding: 5px 
+        font-size: 1.7rem
+        transition-duration: 0.2s
+        border-bottom: 5px solid darken($color3, 30)
+        &:hover
+            background-color: lighten($color3, 20)
+            cursor: pointer

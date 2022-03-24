@@ -47,6 +47,17 @@ body {
   margin-left: 10px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  border: none;
+  background: transparent;
+  padding: 2px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  border-radius: 20px;
+}
+
+.yearLabel:hover {
+  cursor: pointer;
+  background-color: #fbeabc;
 }
 
 .monthLabel {
@@ -54,6 +65,17 @@ body {
       align-self: flex-end;
   font-size: 2rem;
   margin-bottom: 3px;
+  border: none;
+  background: transparent;
+  padding: 2px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  border-radius: 20px;
+}
+
+.monthLabel:hover {
+  cursor: pointer;
+  background-color: #fbeabc;
 }
 
 .buttonHolder {
@@ -259,5 +281,78 @@ body {
   border: 2px solid #F5CB5C;
   padding: 5px;
   width: 10%;
+}
+
+.holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sideBar {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sideBarHidden {
+  display: none;
+}
+
+.sideBarViewLabel {
+  background-color: #F5CB5C;
+  border-bottom: 5px solid #ad810b;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 80%;
+}
+
+.extendedEvent {
+  background-color: #F5CB5C;
+  padding: 5px;
+  border-bottom: 5px solid #f8da8c;
+}
+
+.extendedEventTitle {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.labelholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.labelholder button {
+  width: 20%;
+  border: none;
+  background-color: #F5CB5C;
+  padding: 5px;
+  font-size: 1.7rem;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  border-bottom: 5px solid #ad810b;
+}
+
+.labelholder button:hover {
+  background-color: #fbeabc;
+  cursor: pointer;
 }
 /*# sourceMappingURL=CalendarComponentsStyle.module.css.map */

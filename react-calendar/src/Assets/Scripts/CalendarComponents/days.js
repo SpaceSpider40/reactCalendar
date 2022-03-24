@@ -8,19 +8,20 @@ export default class Days extends React.Component{
 
         this.dayNumber = props.dayNumber
         this.eventIcon = <span className={style.eventIcon}>&#9733;</span>
+        this.onClick = props.onClick
     }
 
 
     render(){
-        return <div className={style.day}>
+        return <div className={style.day} onClick={this.onClick}>
             <div className={style.dayLabel}><span>{this.dayNumber}</span>{this.eventIcon}</div>
             <div className={style.dayEventHolder}>
-                <Event content={"Placehoder"}/>
-                <Event content={"Placehoder"}/>
-                <Event content={"Placehoder"}/>
-                <Event content={"Placehoder"}/>
-                <Event content={"Placehoder"}/>
-                <Event content={"..."}/>
+                <Event title={"Placehoder"}/>
+                <Event title={"Placehoder"}/>
+                <Event title={"Placehoder"}/>
+                <Event title={"Placehoder"}/>
+                <Event title={"Placehoder"}/>
+                <Event title={"..."}/>
             </div>
             </div>
     }
