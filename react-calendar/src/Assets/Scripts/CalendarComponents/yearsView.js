@@ -1,9 +1,14 @@
 import React from "react"
 import style from "../../Styles/CalendarComponentsStyle.module.css"
 import {label, content} from "./yearViewComponents/yearViewComponents.js"
-import MonthsView from "./monthsView";
 
 export default class yearView extends React.Component{
+    constructor(props) {
+        super(props)
+
+        this.transitionYears = props.transitionYears
+    }
+
     render() {
         let yearsList = [];
 
@@ -23,7 +28,7 @@ export default class yearView extends React.Component{
         ]
 
         for(let i=0;i<50;i++){
-            yearsList.push(<div className={style.yearViewItem}>{label(2032-i)}{content(monthsList)}</div>);
+            yearsList.push(<div onClick={()=>this.transitionYears(2032-i)} className={style.yearViewItem}>{label(2032-i)}{content(monthsList)}</div>);
         }
 
         return (

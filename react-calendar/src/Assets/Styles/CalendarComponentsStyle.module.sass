@@ -44,6 +44,9 @@ body
         cursor: pointer
         background-color: lighten($color3, 20)
 
+.yearLabelHidden
+    display: none
+
 .monthLabel
     align-self: flex-end
     font-size: 2rem
@@ -56,6 +59,9 @@ body
     &:hover
         cursor: pointer
         background-color: lighten($color3, 20)
+
+.monthLabelHidden
+    display: none
 
 .buttonHolder
     margin-left: 10px
@@ -79,6 +85,10 @@ body
         &:hover
             transform: scale(1.08)
             background-color: lighten($color3, 20)
+
+.buttonHolderHidden
+    button
+        display: none
 .day
     display: flex
     flex-direction: column

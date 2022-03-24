@@ -60,6 +60,10 @@ body {
   background-color: #fbeabc;
 }
 
+.yearLabelHidden {
+  display: none;
+}
+
 .monthLabel {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -76,6 +80,10 @@ body {
 .monthLabel:hover {
   cursor: pointer;
   background-color: #fbeabc;
+}
+
+.monthLabelHidden {
+  display: none;
 }
 
 .buttonHolder {
@@ -115,6 +123,10 @@ body {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
   background-color: #fbeabc;
+}
+
+.buttonHolderHidden button {
+  display: none;
 }
 
 .day {
