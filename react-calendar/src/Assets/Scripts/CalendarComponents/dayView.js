@@ -7,19 +7,39 @@ export default class dayView extends React.Component{
     constructor(props) {
         super(props)
 
-        this.numberOfDays = 31
+        this.handleClick = this.handleClick.bind(this)
+
+        this.numberOfDaysArr = props.daysArray
+        this.numberOfDays=0
+        for(let i = 0;i<this.numberOfDaysArr.length;i++){
+            this.numberOfDays++;
+        }
         this.daysArray = [];
-        this.sidebarActive = true;
+
+        this.state = {sidebarStatus: "hidden", sidebarDayInfo: ""}
+        
+        for(let i=0;i<this.numberOfDays;i++){
+            this.daysArray.push(<Days onClick={this.handleClick} dayNumber={i+1}/>)
+        }
+
+        this.month = props.month
     }
 
-    handleClick(){
-        this.sidebarActive = false
+    handleClick(day, numberOfEvents){
+        if(this.state.sidebarStatus!=="active"){
+            this.setState({
+                sidebarStatus: "active",
+                sidebarDayInfo: day
+            })
+        }
+        
+        this.setState({
+            sidebarDayInfo: day
+        })
+   
     }
 
     render(){
-        for(let i=0;i<this.numberOfDays;i++){
-            this.daysArray.push(<Days onClick={()=>this.handleClick()} dayNumber={i+1}/>)
-        }
-        return <div className={style.holder}><div className={style.month}>{this.daysArray.map(i=>(i))}</div><Sidebar active={this.sidebarActive}/></div>
+        return <div className={style.holder}><div className={style.month}>{this.daysArray.map(i=>(i))}</div><Sidebar month={this.month} day={this.state.sidebarDayInfo} active={this.state.sidebarStatus}/></div>
     }
 }

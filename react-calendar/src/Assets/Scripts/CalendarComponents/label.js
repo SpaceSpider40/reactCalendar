@@ -11,6 +11,8 @@ export default class Label extends React.Component{
 
     componentWillReceiveProps(props){
         this.labelControls = props.labelControls
+        this.pickedYear = props.pickedYear
+        this.pickedMonth = props.pickedMonth
     }
 
     render(){
@@ -20,18 +22,16 @@ export default class Label extends React.Component{
         switch(this.labelControls){
             case "yb":
                 yearVis = style.yearLabel
-                buttonVis = style.buttonHolder
                 break;
             case "ymb":
                 yearVis = style.yearLabel
                 monthVis = style.monthLabel
-                buttonVis = style.buttonHolder
                 break;
         }
 
         return (<div className={style.label}>
-                    <button className={yearVis} onClick={()=>this.handleChange("y")}>2022</button>
-                    <button className={monthVis} onClick={()=>this.handleChange("m")}>January</button>
+                    <button className={yearVis} onClick={()=>this.handleChange("y")}>{this.pickedYear}</button>
+                    <button className={monthVis} onClick={()=>this.handleChange("m")}>{this.pickedMonth}</button>
                     <div className={buttonVis}>
                         <button onClick={()=>this.handleChange("add")}>&#5169;</button>
                         <button onClick={()=>this.handleChange("sub")}>&#5167;</button>

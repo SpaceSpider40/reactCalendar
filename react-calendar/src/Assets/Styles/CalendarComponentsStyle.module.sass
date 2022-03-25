@@ -195,11 +195,14 @@ body
     flex-direction: row
 
 .sideBar
-    width: 40%
+    width: 50%
     display: flex
     flex-direction: column
+    transition-duration: 1s
+
 .sideBarHidden
-    display: none
+    display: flex
+    width: 0%
 
 .sideBarViewLabel
     background-color: $color3
@@ -226,13 +229,15 @@ body
 .labelholder
     display: flex
     flex-direction: row
+    align-content: center
+    text-align: center
     width: 100%
     button
         width: 20%
         border: none
         background-color: $color3
         padding: 5px 
-        font-size: 1.7rem
+        font-size: 3rem
         transition-duration: 0.2s
         border-bottom: 5px solid darken($color3, 30)
         &:hover

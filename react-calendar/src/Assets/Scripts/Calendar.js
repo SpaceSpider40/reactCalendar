@@ -8,6 +8,7 @@ class calendar extends React.Component{
         super(props)
 
         this.transitionYears = this.transitionYears.bind(this)
+        this.transitionMonths = this.transitionMonths.bind(this)
         this.handleChange = this.handleChange.bind(this)
 
 
@@ -27,7 +28,7 @@ class calendar extends React.Component{
                 break
             case "m":
                 this.setState({
-                    view: <MonthsView/>,
+                    view: <MonthsView transitionMonths={this.transitionMonths} year={this.pickedYear}/>,
                     labelControls: "yb"
                 })
                 break
@@ -45,17 +46,23 @@ class calendar extends React.Component{
 
     transitionYears(data){
         this.setState({
-            view: <MonthsView/>,
+            view: <MonthsView transitionMonths={this.transitionMonths} year={data}/>,
             labelControls: "yb"
         })
-        console.log(this.state.labelControls)
-        console.log(data)
+        this.pickedYear = data
+    }
+
+    transitionMonths(month, numberOfDays){
+        this.setState({
+            view: <DayView month={month} daysArray={numberOfDays}/>,
+            labelControls: "ymb"
+        })
+        this.pickedMonth = month
     }
 
     render(){
-        console.log(this.state.labelControls)
-        console.log(this.state.view)
-        return <div><Label labelControls={this.state.labelControls} handleChange={this.handleChange}/>{this.state.view}</div>;
+        console.log(this.pickedYear);
+        return <div><Label pickedMonth={this.pickedMonth} pickedYear={this.pickedYear} labelControls={this.state.labelControls} handleChange={this.handleChange}/>{this.state.view}</div>;
     }
 }
 

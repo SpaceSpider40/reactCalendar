@@ -13,7 +13,7 @@ export default class Days extends React.Component{
 
 
     render(){
-        return <div className={style.day} onClick={this.onClick}>
+        return <div className={style.day} onClick={()=>this.onClick(this.dayNumber, 2)}>
             <div className={style.dayLabel}><span>{this.dayNumber}</span>{this.eventIcon}</div>
             <div className={style.dayEventHolder}>
                 <Event title={"Placehoder"}/>

@@ -306,7 +306,7 @@ body {
 }
 
 .sideBar {
-  width: 40%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,10 +314,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .sideBarHidden {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0%;
 }
 
 .sideBarViewLabel {
@@ -349,6 +354,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
   width: 100%;
 }
 
@@ -357,7 +365,7 @@ body {
   border: none;
   background-color: #F5CB5C;
   padding: 5px;
-  font-size: 1.7rem;
+  font-size: 3rem;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   border-bottom: 5px solid #ad810b;
