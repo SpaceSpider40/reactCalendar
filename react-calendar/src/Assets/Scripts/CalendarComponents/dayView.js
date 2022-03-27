@@ -23,9 +23,10 @@ export default class dayView extends React.Component{
         }
 
         this.month = props.month
+        this.year = props.year
     }
 
-    handleClick(day, numberOfEvents){
+    handleClick(day){
         if(this.state.sidebarStatus!=="active"){
             this.setState({
                 sidebarStatus: "active",
@@ -40,6 +41,6 @@ export default class dayView extends React.Component{
     }
 
     render(){
-        return <div className={style.holder}><div className={style.month}>{this.daysArray.map(i=>(i))}</div><Sidebar month={this.month} day={this.state.sidebarDayInfo} active={this.state.sidebarStatus}/></div>
+        return <div className={style.holder}><div className={style.month}>{this.daysArray.map(i=>(i))}</div><Sidebar year={this.year} month={this.month} day={this.state.sidebarDayInfo} active={this.state.sidebarStatus}/></div>
     }
 }

@@ -34,7 +34,7 @@ class calendar extends React.Component{
                 break
             case "d":
                 this.setState({
-                    view: <DayView/>,
+                    view: <DayView />,
                     labelControls: "ymb"
                 })
                 break
@@ -54,7 +54,7 @@ class calendar extends React.Component{
 
     transitionMonths(month, numberOfDays){
         this.setState({
-            view: <DayView month={month} daysArray={numberOfDays}/>,
+            view: <DayView year={this.pickedYear} month={month} daysArray={numberOfDays}/>,
             labelControls: "ymb"
         })
         this.pickedMonth = month
