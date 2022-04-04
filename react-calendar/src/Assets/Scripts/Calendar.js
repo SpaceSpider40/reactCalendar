@@ -2,7 +2,9 @@ import React from "react";
 import MonthsView from "./CalendarComponents/monthsView";
 import YearsView from "./CalendarComponents/yearsView"
 import Label from "./CalendarComponents/label";
-import DayView from "./CalendarComponents/dayView"
+import DayView from "./CalendarComponents/dayView";
+import { IndexedDB } from 'react-indexed-db';
+
 class calendar extends React.Component{
     constructor(props) {
         super(props)
@@ -16,6 +18,7 @@ class calendar extends React.Component{
             view: <YearsView transitionYears={this.transitionYears}/>,
             labelControls: ""
         }
+        
     }
 
     handleChange(type){
@@ -61,8 +64,12 @@ class calendar extends React.Component{
     }
 
     render(){
+
         console.log(this.pickedYear);
-        return <div><Label pickedMonth={this.pickedMonth} pickedYear={this.pickedYear} labelControls={this.state.labelControls} handleChange={this.handleChange}/>{this.state.view}</div>;
+        return (
+            <div><Label pickedMonth={this.pickedMonth} pickedYear={this.pickedYear} labelControls={this.state.labelControls} handleChange={this.handleChange}/>{this.state.view}</div>
+        
+        )
     }
 }
 

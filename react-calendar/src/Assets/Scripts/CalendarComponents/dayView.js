@@ -8,6 +8,9 @@ export default class dayView extends React.Component{
         super(props)
 
         this.handleClick = this.handleClick.bind(this)
+        
+        this.month = props.month
+        this.year = props.year
 
         this.numberOfDaysArr = props.daysArray
         this.numberOfDays=0
@@ -19,11 +22,9 @@ export default class dayView extends React.Component{
         this.state = {sidebarStatus: "hidden", sidebarDayInfo: ""}
         
         for(let i=0;i<this.numberOfDays;i++){
-            this.daysArray.push(<Days onClick={this.handleClick} dayNumber={i+1}/>)
+            this.daysArray.push(<Days onClick={this.handleClick} date={i+1+"-"+this.month+"-"+this.year} dayNumber={i+1}/>)
         }
 
-        this.month = props.month
-        this.year = props.year
     }
 
     handleClick(day){

@@ -6,6 +6,8 @@ export default class monthsView extends React.Component{
     constructor(props) {
         super(props)
 
+        
+
         this.year = props.year
 
         if(this.year%4===0){
